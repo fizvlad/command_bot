@@ -1,6 +1,13 @@
 require 'rubocop/rake_task'
 RuboCop::RakeTask.new(:rubocop) {}
 
+require 'rake/testtask'
+Rake::TestTask.new do |t|
+  t.libs << 'test'
+  t.test_files = FileList['test/test*.rb']
+  t.verbose = true
+end
+
 namespace 'rubocop' do
   desc 'Generate rubocop TODO file.'
   task 'todo' do
