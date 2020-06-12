@@ -2,7 +2,5 @@
 
 require 'command_bot/version'
 
-module CommandBot
-  class Error < StandardError; end
-  # Your code goes here...
-end
+# Main module.
+module CommandBot; end
