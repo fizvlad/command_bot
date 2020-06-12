@@ -1,0 +1,36 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-performance
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: false
+  TargetRubyVersion: 2.6
+  Exclude:
+    - config/**/*
+    - tmp/**/*
+    - Capfile
+    - Gemfile
+    - Rakefile
+
+# Follow RubyGuides on this one
+Layout/EndOfLine:
+  EnforcedStyle: lf
+
+# Just enough
+Layout/LineLength:
+  Max: 100
+
+# Follow RubyGuides on this one
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+# Prefer using Rubies methods
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
