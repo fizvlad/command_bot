@@ -61,6 +61,9 @@ loop do
   text = gets.chomp
   break if text.empty?
 
-  re = bot_1.handle(text)
-  puts re if re
+  re_1 = bot_1.handle(text)
+  puts re_1 if re_1
+
+  re_2 = bot_2.handle(text)
+  puts re_2 if re_2
 end
