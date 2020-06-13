@@ -47,7 +47,7 @@ help_command = CommandBot::Command.new(
   HELP
 end
 
-bot = CommandBot::Bot.new(identifier: CommandBot::CommandIdentifier.default)
+bot = CommandBot::Bot.new(identifier: CommandBot::CommandIdentifier.primitive)
 bot.add_commands(ping_command, help_command)
 
 puts 'Awaiting input:'
