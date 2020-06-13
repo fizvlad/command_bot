@@ -7,3 +7,5 @@ gem 'rubocop', '~> 0.85.0'
 gem 'rubocop-performance', require: false
 
 gem 'pry', '~> 0.13.1'
+
+gem "logger", "~> 1.4"
