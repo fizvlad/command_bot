@@ -50,7 +50,7 @@ end
 command_identifier1 = CommandBot::CommandIdentifier.default(prefix: '!')
 command_identifier2 = CommandBot::CommandIdentifier.default(prefix: '?')
 
-bot1 = CommandBot::Bot.new(identifier: command_identifier1)
+bot1 = CommandBot::Bot.new(identifier: command_identifier1, log_level: Logger::DEBUG)
 bot1.add_commands(ping_command, help_command)
 
 bot2 = CommandBot::Bot.new(identifier: command_identifier2)
