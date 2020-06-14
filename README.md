@@ -10,7 +10,7 @@ Add gem to your Gemfile using
 
 ## Usage
 
-TODO: Write usage instructions here
+See `examples` folder.
 
 ## Development
 
