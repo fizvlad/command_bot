@@ -39,6 +39,7 @@ module CommandBot
     # @return [void]
     def execute
       raise 'Command not identified!' if command.nil?
+
       command.handler.call(bot, arguments, options, data)
     end
 
