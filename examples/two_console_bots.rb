@@ -47,23 +47,23 @@ help_command = CommandBot::Command.new(
   HELP
 end
 
-command_identifier_1 = CommandBot::CommandIdentifier.default(prefix: '!')
-command_identifier_2 = CommandBot::CommandIdentifier.default(prefix: '?')
+command_identifier1 = CommandBot::CommandIdentifier.default(prefix: '!')
+command_identifier2 = CommandBot::CommandIdentifier.default(prefix: '?')
 
-bot_1 = CommandBot::Bot.new(identifier: command_identifier_1)
-bot_1.add_commands(ping_command, help_command)
+bot1 = CommandBot::Bot.new(identifier: command_identifier1)
+bot1.add_commands(ping_command, help_command)
 
-bot_2 = CommandBot::Bot.new(identifier: command_identifier_2)
-bot_2.add_commands(ping_command, help_command)
+bot2 = CommandBot::Bot.new(identifier: command_identifier2)
+bot2.add_commands(help_command, ping_command)
 
 puts 'Awaiting input:'
 loop do
   text = gets.chomp
   break if text.empty?
 
-  re_1 = bot_1.handle(text)
-  puts re_1 if re_1
+  re1 = bot1.handle(text)
+  puts re1 if re1
 
-  re_2 = bot_2.handle(text)
-  puts re_2 if re_2
+  re2 = bot2.handle(text)
+  puts re2 if re2
 end
