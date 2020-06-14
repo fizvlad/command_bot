@@ -59,7 +59,14 @@ module CommandBot
       command_call = identify_command_call(text, data)
       return nil if command_call.nil? # Not a command call, so not handling.
 
-      logger.debug "Formed command call: #{command_call}"
+      handle_command_call(command_call)
+    end
+
+    # Hadnle {CommandCall}.
+    # @param command_call [CommandCall]
+    # @return [void, nil] result depends on handler of command.
+    def handle_command_call(command_call)
+      logger.debug "Hadnling command call: #{command_call}"
       if command_call.command
         execute_command_call(command_call)
       else
