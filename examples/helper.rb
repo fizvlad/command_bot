@@ -10,7 +10,7 @@ PingCommand = CommandBot::Command.new(
     description: 'ping-pong',
     description_long: 'Ping-pong.'
   }
-) do |_bot, _arguments, _options, *_other|
+) do |_bot, _arguments, _options, _data|
   'pong'
 end
 
@@ -23,7 +23,7 @@ HelpCommand = CommandBot::Command.new(
                       'command if atgument is not specified.',
     another_info: 'you can pass any data here'
   }
-) do |bot, arguments, _options, *_other|
+) do |bot, arguments, _options, _data|
   commands = if arguments.empty?
                bot.commands
              else
