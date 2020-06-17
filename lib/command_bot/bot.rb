@@ -27,6 +27,9 @@ module CommandBot
     # @return [Array<Command>]
     attr_reader :commands
 
+    # @return [CommandIdentifier]
+    attr_reader :identifier
+
     # @param name [String]
     # @return [Command, nil]
     def find_command(name)
